@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Invoice Bill
+    </title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <div class="wrapper">
+        <div class="fromCompany">
+            <h3>XYZ Company</h3>
+            <div class="fromCompany address">Nayabazar, Kathmandu Nepal</div>
+            <div class="fromCompany contact">asd@gmail.com</div>
+        </div>
+        <main>
+            <div class="add-item-area text-center card d-flex flex-column">
+                <h2>Add List of Items Here</h2>
+                <div class="input-boxes d-flex">
+                    <div class="input-form items-center flex-1 d-flex">
+                        <label class="text-left">Product</label>
+                        <input class="flex-1" type="text" placeholder="Place your Items" name="name" id="name"
+                            autocomplete="off" required />
+                    </div>
+                    <div class="input-form  items-center flex-1 d-flex">
+                        <label class="text-left">Quantity</label>
+                        <input class="flex-1" required type="number" placeholder="Quantity" name="quantity"
+                            id="quantity" autocomplete="off" />
+                    </div>
+                    <div class="input-form  items-center flex-1 d-flex">
+                        <label class="text-left">Price</label>
+                        <input class="flex-1" required type="number" placeholder="Price" name="price" id="price"
+                            autocomplete="off" />
+                    </div>
+                </div>
+                <button class="self-end" onclick="createItem()">Create Bill</button>
+            </div>
+            <div class="table-area card flex-1 d-flex flex-column text-center align-center">
+                <div class="toCompany d-flex justify-between flex-column">
+                    <div class="d-flex justify-between">
+                        <div class="toCompanyArea">
+                            <h3 class="text-left">To Company,</h3>
+                            <div class="input-area">
+                                <div class="input-form d-flex">
+                                    <label class="text-left">Name</label>
+                                    <input required class="toCompany flex-1 name" type="text" placeholder="Name" />
+                                </div>
+                                <div class="input-form d-flex">
+                                    <label class="text-left">Contact No.</label>
+                                    <input required class="toCompany class=flex-1 contact" type="text"
+                                        placeholder="Contact No." />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-right flex">
+                            <h3>Invoice ID 101</h3>
+                            <div class="input-form d-flex">
+                                <label class="text-left">From Date</label>
+                                <input required type="date" class="flex-1" placeholder="From Date" />
+                            </div>
+                            <div class="input-form d-flex">
+                                <label class="text-left">To Date</label>
+                                <input required type="date" class="flex-1" placeholder="To Date" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table flex-1">
+                        <h2>Item List</h2>
+                        <div class="table-headers row d-flex">
+                            <div class="col flex-4 text-center">Name</div>
+                            <div class="col flex-1 text-left">Quantity</div>
+                            <div class="col flex-1 text-center">Price</div>
+                            <div class="col flex-2 text-right">Total</div>
+                            <div class="col flex-2 text-right">Actions</div>
+                            <div class="col flex-1 text right">
+                                <button class="self-end" onclick="reset()">Reset</button>
+                            </div>
+                        </div>
+
+                        <div id="itemDisplay">
+
+                        </div>
+                        <div id="editDisplay"></div>
+                    </div>
+
+                    <section class="calculation">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="input-form d-flex align-center calc-font">
+                                        <label class="text-left"> Discount % </label>
+                                        <input class="text-right flex-1" type="text" id="discount" name="discount"
+                                            onkeyup="totalBills()" />
+                                    </div>
+                                </td>
+                                <br />
+                            </tr>
+                        </table>
+
+                        <div class="text-right">
+                            <div id="total"></div>
+                            <div id="afterDiscount">
+                            </div>
+                            <div id="totalAmount">
+                            </div>
+                        </div>
+                    </section>
+                    <div class="flex-2 col self-end">
+                        <div class="col">
+                            <button onclick="display()">Print</button></div>
+                    </div>
+                </div>
+        </main>
+        <h2 class="text-center">Notice: A finance charge of 25% will be charged after 30 days </h2>
+</body>
+<script>
+    function display() {
+        window.print();
+    }
+</script>
+<script src="./script.js "></script>
+
+</html>
+
+<!-- <script type="text/javascript "></script> -->

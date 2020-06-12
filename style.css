@@ -1,0 +1,350 @@
+body {
+    position: relative;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.calculation {
+    justify-content: space-around;
+    margin-top: 10px;
+    flex-direction: row;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    background: linear-gradient(165deg, #4f83cc, #0c3a7d);
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("./pattern.jpg") repeat;
+    mix-blend-mode: multiply;
+    opacity: 0.3;
+    filter: invert(1);
+}
+
+main {
+    width: 100%;
+    padding: 0 5vw;
+    box-sizing: border-box;
+}
+
+.item table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 20px;
+}
+
+table {
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.flex-column{
+    flex-direction: column;
+}
+.table-headers {
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 17px;
+    color:#0c3a7d;
+    border-radius:10px 10px 0 0;
+    border-bottom: 1px solid #ccc;
+}
+/* .table-body{
+    padding: 10px;
+    font-weight:200;
+    font-size: 14px;
+    border-bottom: 1px solid #333;
+} */
+.table .col{
+    padding:5px 10px;
+    box-sizing: border-box;
+}
+.item table td {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 300;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    display:grid;
+    
+}
+.calc-font{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+button {
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #4f83cc;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(79, 131, 204, 0.53);
+    align-items: center;
+}
+
+button:hover {
+    background: #102027;
+}
+
+.topnav {
+    background-color: #3989c6;
+    overflow: hidden;
+    text-align: center;
+    font-size: 17px;
+    color: white;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.delbtncolor {
+    background: #ff0000;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.wrapper>div {
+    padding: 1em;
+}
+
+.card {
+    background: white;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 24px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.d-flex {
+    display: flex;
+}
+
+.add-item-area h3 {
+    margin: 0;
+}
+
+.fromCompany {
+    color: white;
+    text-align: center;
+}
+
+.fromCompany h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 4vw;
+}
+
+label {
+    font-size: 0.9em;
+}
+
+.input-boxes {
+    margin: 20px 0;
+}
+
+input {
+    color: #5d6d7e;
+    outline: none;
+    border: none;
+    /* margin: 30px; */
+}
+
+.input-boxes .input-form {
+    margin-left: 15px;
+    width: 30%;
+}
+
+.input-boxes .input-form input {
+    font-family: "Montserrat", sans-serif;
+}
+
+.input-form {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 7px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.input-form label {
+    margin-right: 15px;
+    width: 150px;
+}
+
+.input-boxes .input-form:nth-child(1) {
+    margin-left: 0;
+}
+
+.table-area {
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+.flex-4 {
+    flex: 4;
+}
+
+.flex-5 {
+    flex: 5;
+}
+
+.flex-6 {
+    flex: 6;
+}
+
+.flex-7 {
+    flex: 7;
+}
+
+.flex-8 {
+    flex: 8;
+}
+
+.flex-9 {
+    flex: 9;
+}
+
+.margin {
+    margin: 30px;
+}
+
+h2,
+h3,
+h1 {
+    font-family: "Poppins", sans-serif;
+}
+
+.companyID {
+    margin-top: 0;
+    color: #3989c6;
+    text-align: right;
+}
+
+.companyID .date-to {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.align-center {
+    align-content: center;
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.self-end {
+    align-self: flex-end;
+}
+
+.item-display {
+    background: white;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.item-display .item {
+    width: 100%;
+    border-radius: 5px;
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+    position: relative;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.12);
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
